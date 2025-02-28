@@ -51,7 +51,7 @@ pgcon.connect();
 pgcon.query('SELECT * FROM users WHERE id = ' + userinput, (err, res) => {}); // Sensitive
 
 //OS Command should not be vulnerable
-async function (req, res) {
+async function TestOSCommand(req, res) {
     await execa.command('find /tmp/images/' + req.query.id); // Noncompliant
 }
 //Forwarding client IP address is security sensitive
