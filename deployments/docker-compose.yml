@@ -23,7 +23,7 @@ services:
         restart: always
 
     mongo:
-        container_name: mongo
+        container_name: mongection-db
         build:
             context: ../
             dockerfile: deployments/mongo.Dockerfile
