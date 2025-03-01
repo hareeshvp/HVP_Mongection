@@ -6,4 +6,4 @@ RUN apt-get update && \
     npm install && \
     npm install dd-trace
 
-CMD node src/app.js
+CMD ["/bin/sh", "deployments/run.sh"]
